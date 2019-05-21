@@ -12,6 +12,13 @@
 		FA5C793C2293005300073624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5C793A2293005300073624 /* Main.storyboard */; };
 		FA5C793E2293005300073624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5C793D2293005300073624 /* Assets.xcassets */; };
 		FA5C79412293005300073624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5C793F2293005300073624 /* LaunchScreen.storyboard */; };
+		FA5C794922930DAD00073624 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C794822930DAD00073624 /* DashboardViewController.swift */; };
+		FA5C794B22930DC100073624 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C794A22930DC100073624 /* RecoverPasswordViewController.swift */; };
+		FA5C794D22930DDB00073624 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C794C22930DDB00073624 /* RegisterViewController.swift */; };
+		FA5C795322930E3800073624 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C795222930E3800073624 /* Usuario.swift */; };
+		FA5C795522931CD600073624 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C795422931CD600073624 /* MasterViewController.swift */; };
+		FA5C7957229334E100073624 /* ListEmployeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C7956229334E100073624 /* ListEmployeTableViewController.swift */; };
+		FA5C795922933AFA00073624 /* DetailEmployeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C795822933AFA00073624 /* DetailEmployeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		FA5C793D2293005300073624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5C79402293005300073624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5C79422293005300073624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA5C794822930DAD00073624 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		FA5C794A22930DC100073624 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		FA5C794C22930DDB00073624 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FA5C795222930E3800073624 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		FA5C795422931CD600073624 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		FA5C7956229334E100073624 /* ListEmployeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEmployeTableViewController.swift; sourceTree = "<group>"; };
+		FA5C795822933AFA00073624 /* DetailEmployeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEmployeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,37 @@
 		FA5C79352293005300073624 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				FA5C795122930E2100073624 /* Bussiness */,
+				FA5C795022930E0100073624 /* ViewControllers */,
 				FA5C79362293005300073624 /* AppDelegate.swift */,
-				FA5C79382293005300073624 /* ViewController.swift */,
 				FA5C793A2293005300073624 /* Main.storyboard */,
 				FA5C793D2293005300073624 /* Assets.xcassets */,
 				FA5C793F2293005300073624 /* LaunchScreen.storyboard */,
 				FA5C79422293005300073624 /* Info.plist */,
 			);
 			path = Project;
+			sourceTree = "<group>";
+		};
+		FA5C795022930E0100073624 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA5C79382293005300073624 /* ViewController.swift */,
+				FA5C794822930DAD00073624 /* DashboardViewController.swift */,
+				FA5C794A22930DC100073624 /* RecoverPasswordViewController.swift */,
+				FA5C794C22930DDB00073624 /* RegisterViewController.swift */,
+				FA5C795422931CD600073624 /* MasterViewController.swift */,
+				FA5C7956229334E100073624 /* ListEmployeTableViewController.swift */,
+				FA5C795822933AFA00073624 /* DetailEmployeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA5C795122930E2100073624 /* Bussiness */ = {
+			isa = PBXGroup;
+			children = (
+				FA5C795222930E3800073624 /* Usuario.swift */,
+			);
+			path = Bussiness;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +173,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5C79392293005300073624 /* ViewController.swift in Sources */,
+				FA5C794D22930DDB00073624 /* RegisterViewController.swift in Sources */,
+				FA5C795322930E3800073624 /* Usuario.swift in Sources */,
+				FA5C794922930DAD00073624 /* DashboardViewController.swift in Sources */,
+				FA5C795922933AFA00073624 /* DetailEmployeViewController.swift in Sources */,
+				FA5C794B22930DC100073624 /* RecoverPasswordViewController.swift in Sources */,
+				FA5C7957229334E100073624 /* ListEmployeTableViewController.swift in Sources */,
+				FA5C795522931CD600073624 /* MasterViewController.swift in Sources */,
 				FA5C79372293005300073624 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
