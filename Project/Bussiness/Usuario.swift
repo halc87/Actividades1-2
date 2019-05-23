@@ -18,6 +18,12 @@ public class Usuario{
     public var password:String?
     public var DOB:String?
     public var employeNumber:String?
+    public var rol:String?
+    public var address:String?
+    public var notes:String?
+    public var personVisit:String?
+    public var amount:String?
+    
     
     init(){
         self.name = nil
@@ -28,6 +34,11 @@ public class Usuario{
         self.password = nil
         self.DOB = nil
         self.employeNumber = nil
+        self.rol = nil
+        self.address = nil
+        self.notes = nil
+        self.personVisit = nil
+        self.amount = nil
     }
     
     init(withData:Bool){
@@ -39,6 +50,23 @@ public class Usuario{
         self.password = "1234"
         self.DOB = "25/06/1987"
         self.employeNumber = "343259"
+        self.rol = "Jefe de cobranza"
+    }
+    
+    
+    
+    
+    init(name:String, phone:Int, email:String, DOB:String, rol:String, address:String, notes:String, personVisit:String, amount:String){
+        
+        self.name = name
+        self.phone = phone
+        self.email = email
+        self.DOB = DOB
+        self.rol = rol
+        self.address = address
+        self.notes = notes
+        self.personVisit = personVisit
+        self.amount = amount
     }
     
     @discardableResult

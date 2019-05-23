@@ -10,9 +10,11 @@ import UIKit
 
 class ListEmployeTableViewController: UITableViewController {
 
-    var listEmployes:[Usuario]?
-    var userSelected:Usuario?
+    var listEmployes:[EmployeeStruct]?
+    var userSelected:EmployeeStruct?
     
+    var image:UIImage = UIImage(named: "torta-de-cumpleanos")!
+    var message:String? = "Te invito a mi fiesta"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +43,27 @@ class ListEmployeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = listEmployes![indexPath.row].name
-
+        cell.textLabel?.text = listEmployes![indexPath.row].fullName
+        
+        //listEmployes![indexPath.row].getDaysForDOB()
+        
+        let cellAudioButton = UIButton(type: .custom)
+        cellAudioButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        cellAudioButton.addTarget(self, action: #selector(btnShare(sender : )), for: .touchUpInside)
+        cellAudioButton.setImage(UIImage(named: "torta-de-cumpleanos"), for: .normal)
+        cellAudioButton.contentMode = .scaleAspectFit
+        cellAudioButton.tag = indexPath.row
+        cell.accessoryView = cellAudioButton as UIView
+        
         return cell
     }
     
+    
+    @objc func btnShare(sender : UIButton) {
+        let activityController = UIActivityViewController(activityItems:[image,message ?? "Te invito a mi fiesta"], applicationActivities:nil)
+        activityController.excludedActivityTypes = [ UIActivity.ActivityType.postToTwitter, UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.postToVimeo]
+        present(activityController,animated: true,completion: nil)
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         userSelected = self.listEmployes![indexPath.row]
