@@ -13,7 +13,7 @@ public class Usuario{
     public var name:String?
     public var lastName:String?
     public var secondLastName:String?
-    public var phone:Int?
+    public var phone:String?
     public var email:String?
     public var password:String?
     public var DOB:String?
@@ -45,7 +45,7 @@ public class Usuario{
         self.name = "Hugo"
         self.lastName = "Lechuga"
         self.secondLastName = "Canales"
-        self.phone = 5528832513
+        self.phone = "5528832513"
         self.email = "deshugo@gmail.com"
         self.password = "1234"
         self.DOB = "25/06/1987"
@@ -56,7 +56,7 @@ public class Usuario{
     
     
     
-    init(name:String, phone:Int, email:String, DOB:String, rol:String, address:String, notes:String, personVisit:String, amount:String){
+    init(name:String, phone:String, email:String, DOB:String, rol:String, address:String, notes:String, personVisit:String, amount:String){
         
         self.name = name
         self.phone = phone

@@ -97,18 +97,87 @@ class RegisterViewController: MasterViewController {
     }
     */
     
-    @IBAction func btnRegisterUser(_ sender: Any) {
-        user = Usuario()
+    
+    func validateFields() ->Bool{
+        
+        
+        if (txfName.text?.isEmpty)!{
+            showAlert(titleS: "Error", messageS: "Falta llenar Nombre")
+            return false
+        }
+        
+        if (txfAPaterno.text?.isEmpty)!{
+            showAlert(titleS: "Error", messageS: "Falta llenar Apellido paterno")
+            return false
+        }
+        
+        
+        if (txfAMaterno.text?.isEmpty)!{
+            showAlert(titleS: "Error", messageS: "Falta llenar Apellido materno")
+            return false
+        }
+        
+        
+        if (txfDatePicker.text?.isEmpty)!{
+            showAlert(titleS: "Error", messageS: "Falta llenar fecha de nacimiento")
+            return false
+        }
+        
+        
+        if (txfNumEmploye.text?.isEmpty)!{
+            showAlert(titleS: "Error", messageS: "Falta llenar número de empleado")
+            return false
+        }
+        
+        if (txfPhone.text?.isEmpty)!{
+            showAlert(titleS: "Error", messageS: "Falta llenar telefono")
+            return false
+        }
+        
+        if (txfEmail.text?.isEmpty)!{
+            showAlert(titleS: "Error", messageS: "Falta llenar correo")
+            return false
+        }
 
-        user?.DOB = txfDatePicker.text
-        user?.name = txfName.text
-        user?.lastName = txfAPaterno.text
-        user?.secondLastName = txfAMaterno.text
-        user?.email = txfEmail.text
-        user?.employeNumber = txfNumEmploye.text
-        user?.phone = Int(txfPhone.text ?? "")
-        user?.password = txfPassword.text
-        coreDataSaveUser()
+       
+        
+        if (txfPassword.text?.isEmpty)!{
+            showAlert(titleS: "Error", messageS: "Falta llenar password")
+            return false
+        }
+        
+        if (txfConfPassword.text?.isEmpty)!{
+            showAlert(titleS: "Error", messageS: "Falta llenar confirmacion de password")
+            return false
+        }
+        
+        
+        if txfConfPassword.text != txfPassword.text{
+            showAlert(titleS: "Error", messageS: "el passwor es diferente")
+            return false
+        }
+        
+        return true
+    }
+    
+    @IBAction func btnRegisterUser(_ sender: Any) {
+        
+        if validateFields(){
+            user = Usuario()
+
+            user?.DOB = txfDatePicker.text
+            user?.name = txfName.text
+            user?.lastName = txfAPaterno.text
+            user?.secondLastName = txfAMaterno.text
+            user?.email = txfEmail.text
+            user?.employeNumber = txfNumEmploye.text
+            user?.phone = txfPhone.text
+            user?.password = txfPassword.text
+            coreDataSaveUser()
+        }else{
+            user = Usuario()
+        }
+        
     }
     
     
@@ -126,6 +195,7 @@ class RegisterViewController: MasterViewController {
         newUser.setValue(txfPhone.text!, forKey: "phone")
         newUser.setValue(txfDatePicker.text!, forKey: "dob")
         newUser.setValue(txfPassword.text!, forKey: "password")
+        newUser.setValue("1", forKey: "activo")
         
         do {
             try context.save()

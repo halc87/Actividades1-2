@@ -524,17 +524,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-wc-JjH">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-wc-JjH">
                                 <rect key="frame" x="0.0" y="64" width="375" height="936"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-wH-9eI">
+                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-wH-9eI">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="950"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Eft-gc-PZM">
+                                                <rect key="frame" x="77.5" y="848" width="220" height="45"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yf-Oy-rLo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="Ndj-EX-k4r"/>
+                                                            <constraint firstAttribute="width" constant="100" id="zZA-1F-m3E"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Actualizar "/>
+                                                        <connections>
+                                                            <action selector="btnShare:" destination="7U7-72-xqj" eventType="touchUpInside" id="FrM-am-l0C"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9En-Ec-vU4">
+                                                        <rect key="frame" x="120" y="0.0" width="100" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="8Y7-pH-D3k"/>
+                                                            <constraint firstAttribute="width" constant="100" id="sLd-r1-GCY"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Eliminar"/>
+                                                        <connections>
+                                                            <action selector="btnElikminar:" destination="7U7-72-xqj" eventType="touchUpInside" id="DJr-GJ-cPp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Eft-gc-PZM" secondAttribute="bottom" constant="57" id="3oQ-3b-vRe"/>
                                             <constraint firstAttribute="height" constant="950" id="bvE-y7-pGG"/>
+                                            <constraint firstItem="Eft-gc-PZM" firstAttribute="centerX" secondItem="JhV-wH-9eI" secondAttribute="centerX" id="rlk-eD-toq"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LxC-69-QS8">
+                                    <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LxC-69-QS8">
                                         <rect key="frame" x="30" y="15" width="315" height="815"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8V-3i-thp">
@@ -561,7 +592,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fotografia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUz-vS-K42">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido Paterno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUz-vS-K42">
                                                 <rect key="frame" x="0.0" y="117" width="315" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -573,7 +604,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dirección" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ox9-fg-RHQ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido Materno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ox9-fg-RHQ">
                                                 <rect key="frame" x="0.0" y="175.5" width="315" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -681,7 +712,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9o-L7-1LJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9o-L7-1LJ">
                                                 <rect key="frame" x="0.0" y="702" width="315" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -693,7 +724,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Productos adquirodos en la compañia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sU-Jt-Xne">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sU-Jt-Xne">
                                                 <rect key="frame" x="0.0" y="760.5" width="315" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -707,20 +738,8 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yf-Oy-rLo">
-                                        <rect key="frame" x="165" y="860" width="45" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="Ndj-EX-k4r"/>
-                                            <constraint firstAttribute="width" constant="45" id="zZA-1F-m3E"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="torta-de-cumpleanos"/>
-                                        <connections>
-                                            <action selector="btnShare:" destination="7U7-72-xqj" eventType="touchUpInside" id="FrM-am-l0C"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="7yf-Oy-rLo" firstAttribute="centerX" secondItem="LxC-69-QS8" secondAttribute="centerX" id="4Tj-HQ-xkf"/>
                                     <constraint firstItem="JhV-wH-9eI" firstAttribute="top" secondItem="JO3-wc-JjH" secondAttribute="top" id="J4c-W1-1n5"/>
                                     <constraint firstAttribute="trailing" secondItem="JhV-wH-9eI" secondAttribute="trailing" id="SzW-LC-5EO"/>
                                     <constraint firstAttribute="bottom" secondItem="JhV-wH-9eI" secondAttribute="bottom" id="Vq1-3R-khS"/>
@@ -728,7 +747,6 @@
                                     <constraint firstItem="JhV-wH-9eI" firstAttribute="leading" secondItem="JO3-wc-JjH" secondAttribute="leading" id="jP5-9U-yeO"/>
                                     <constraint firstItem="LxC-69-QS8" firstAttribute="top" secondItem="JO3-wc-JjH" secondAttribute="top" constant="15" id="pfs-UU-SB2"/>
                                     <constraint firstAttribute="trailing" secondItem="LxC-69-QS8" secondAttribute="trailing" constant="30" id="uMy-9o-Nqi"/>
-                                    <constraint firstItem="7yf-Oy-rLo" firstAttribute="top" secondItem="LxC-69-QS8" secondAttribute="bottom" constant="30" id="yLU-Ea-3j0"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -762,7 +780,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ONV-Wo-loO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3256.8000000000002" y="150.67466266866569"/>
+            <point key="canvasLocation" x="3256.8000000000002" y="150.22488755622189"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="KML-21-ua7">
@@ -912,7 +930,4 @@
             <point key="canvasLocation" x="-353" y="134"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="torta-de-cumpleanos" width="128" height="128"/>
-    </resources>
 </document>
