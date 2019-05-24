@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RegisterViewController: MasterViewController {
 
@@ -32,7 +33,8 @@ class RegisterViewController: MasterViewController {
         self.showDatePicker()
     }
     
-
+    
+    
     //MARK private func
     
    private func showDatePicker(){
@@ -97,7 +99,7 @@ class RegisterViewController: MasterViewController {
     
     @IBAction func btnRegisterUser(_ sender: Any) {
         user = Usuario()
-        
+
         user?.DOB = txfDatePicker.text
         user?.name = txfName.text
         user?.lastName = txfAPaterno.text
@@ -106,6 +108,29 @@ class RegisterViewController: MasterViewController {
         user?.employeNumber = txfNumEmploye.text
         user?.phone = Int(txfPhone.text ?? "")
         user?.password = txfPassword.text
+        coreDataSaveUser()
     }
     
+    
+    func coreDataSaveUser(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Users", in: context)
+        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+        
+        newUser.setValue(txfNumEmploye.text!, forKey: "employeNumber")
+        newUser.setValue(txfName.text!, forKey: "name")
+        newUser.setValue(txfAPaterno.text!, forKey: "lastname")
+        newUser.setValue(txfAMaterno.text!, forKey: "secondlastname")
+        newUser.setValue(txfEmail.text!, forKey: "email")
+        newUser.setValue(txfPhone.text!, forKey: "phone")
+        newUser.setValue(txfDatePicker.text!, forKey: "dob")
+        newUser.setValue(txfPassword.text!, forKey: "password")
+        
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
+        }
+    }
 }

@@ -23,6 +23,7 @@
 		FA5C797B22948DF700073624 /* WSStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C797A22948DF700073624 /* WSStruct.swift */; };
 		FA9BAEA02296EB4100F8F92C /* ListCollectorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BAE9F2296EB4100F8F92C /* ListCollectorsTableViewController.swift */; };
 		FA9BAEA2229712D800F8F92C /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BAEA1229712D800F8F92C /* MapDetailViewController.swift */; };
+		FA9BAEE522982E9B00F8F92C /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA9BAEE322982E9B00F8F92C /* UserModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FA5C797A22948DF700073624 /* WSStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSStruct.swift; sourceTree = "<group>"; };
 		FA9BAE9F2296EB4100F8F92C /* ListCollectorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectorsTableViewController.swift; sourceTree = "<group>"; };
 		FA9BAEA1229712D800F8F92C /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
+		FA9BAEE422982E9B00F8F92C /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		FA5C79352293005300073624 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				FA9BAEE322982E9B00F8F92C /* UserModel.xcdatamodeld */,
 				FA5C795122930E2100073624 /* Bussiness */,
 				FA5C795022930E0100073624 /* ViewControllers */,
 				FA5C79362293005300073624 /* AppDelegate.swift */,
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9BAEE522982E9B00F8F92C /* UserModel.xcdatamodeld in Sources */,
 				FA5C797B22948DF700073624 /* WSStruct.swift in Sources */,
 				FA5C79392293005300073624 /* ViewController.swift in Sources */,
 				FA9BAEA2229712D800F8F92C /* MapDetailViewController.swift in Sources */,
@@ -394,6 +398,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA9BAEE322982E9B00F8F92C /* UserModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA9BAEE422982E9B00F8F92C /* UserModel.xcdatamodel */,
+			);
+			currentVersion = FA9BAEE422982E9B00F8F92C /* UserModel.xcdatamodel */;
+			path = UserModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA5C792B2293005300073624 /* Project object */;
 }

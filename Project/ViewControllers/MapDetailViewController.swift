@@ -110,7 +110,7 @@ class MapDetailViewController: MasterViewController {
         
         
         let center = CLLocationCoordinate2D(latitude: (myLocation?.coordinate.latitude)! , longitude: (myLocation?.coordinate.longitude)!)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.009, longitudeDelta:  0.009))
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta:  0.005))
         self.mapView.setRegion(region, animated: true)
         self.mapView.showsUserLocation = true
         self.mapView.showsCompass = true
